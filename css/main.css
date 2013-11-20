@@ -1,0 +1,844 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+ color: #222;
+}
+
+body {
+ font-size: 1em;	
+ background:#ccc;
+ line-height: 1.4;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+@font-face {
+	font-family: 'Conv_Soho Gothic Pro Light';
+	src: url('fonts/Soho Gothic Pro Light.eot');
+	src: local('?'), url('fonts/Soho Gothic Pro Light.woff') format('woff'), url('fonts/Soho Gothic Pro Light.ttf') format('truetype'), url('fonts/Soho Gothic Pro Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_SohoGothicPro-Medium';
+	src: url('fonts/SohoGothicPro-Medium.eot');
+	src: local('?'), url('fonts/SohoGothicPro-Medium.woff') format('woff'), url('fonts/SohoGothicPro-Medium.ttf') format('truetype'), url('fonts/SohoGothicPro-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_SohoGothicPro-Light';
+	src: url('fonts/SohoGothicPro-Light.eot');
+	src: local('?'), url('fonts/SohoGothicPro-Light.woff') format('woff'), url('fonts/SohoGothicPro-Light.ttf') format('truetype'), url('fonts/SohoGothicPro-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+* {
+ margin:0;
+ padding:0;
+}
+a {
+ text-decoration:none;
+ color:#fff;
+}
+
+html,body{
+ width:100%;
+ doverflow:hidden;
+ height:100%;
+ 
+ scrollbar-face-color: #222;
+scrollbar-shadow-color: #222;
+scrollbar-highlight-color:#485dc6;
+scrollbar-3dlight-color: #222;
+scrollbar-darkshadow-color: #222;
+scrollbar-track-color: #ccc;
+scrollbar-arrow-color: #222;
+
+
+-ms-scrollbar-3dlight-color : #222 ;
+-ms-scrollbar-arrow-color: #222;
+-ms-scrollbar-darkshadow-color : #222;
+-ms-scrollbar-face-color: #485dc6;
+-ms-scrollbar-highlight-color : #485dc6;
+-ms-scrollbar-shadow-color : none;
+-ms-scrollbar-track-color : #ccc;
+
+
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+div.Main {
+ float:left;
+ width:100%;	
+ position:relative;
+ height:100%;
+ 
+}
+
+div.lines {
+ background:url("../img/background/bg-up.png") no-repeat scroll 0 0;
+	width:260px;
+	left:600px;
+	top:0;
+	height:194px;
+	position:absolute;
+	z-index:10;
+}
+
+header {
+ position:fixed;
+	z-index:10;
+	width:100%;
+}
+
+div.header-wrap {
+ margin:23px auto 0 auto;
+	width:1095px;
+}
+
+nav ul {
+ width:375px;
+ float:left;
+ padding:17px 0 0 0;
+}
+
+nav ul li {
+ float:left;
+ width:auto;
+ padding:0 18px 0 0;
+}
+
+nav ul li a {
+ font-family: 'Conv_Soho Gothic Pro Light';
+ font-size:20px;
+}
+
+div.social {
+ float:left;
+ margin: 22px 0 0 50px;
+ width:55px;
+}
+
+div.social a {
+ display:inline-block;
+ width:20px;
+ margin: 0 5px 0 0;
+ height:21px;
+}
+
+div.social a.fb {
+ background: url("../img/background/fb.png") no-repeat scroll 0 0 transparent;
+}
+
+div.social a.twitter {
+ background: url("../img/background/twitter.png") no-repeat scroll 0 0 transparent;
+}
+
+a.logo {
+ float:right;
+ margin: 0 35px 0 0;
+}
+
+div.content {
+ margin:0 auto;
+ clear:both;
+ width:1095px;
+}
+
+div.home { 
+ margin:0 auto;
+ clear:both;
+ width:1095px;
+}
+
+h1 {
+ font-family: 'Conv_SohoGothicPro-Medium';
+ font-size:75px;
+ color:#fff;
+ line-height:78px;
+ font-weight:normal;
+}
+
+div.project {
+ float:left;
+ width:650px;
+ padding:110px 0 0 0;
+}
+
+p {
+ font-size:19px;
+ line-height:24px;
+ color:#fff;
+ font-family: 'Conv_SohoGothicPro-Light';
+}
+
+div.project  a  {
+ background:#fff;
+ float:right;
+ padding:25px;
+	font-family: 'Conv_SohoGothicPro-Light';
+ color:#485dc5;
+ width:44px;
+ height:44px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border-radius: 100px;
+}
+
+div.homewrap {
+ position:relative;
+	width:100%;
+	float:left;
+}
+
+div.bgnext {
+ background: url("../img/background/side-bg.png") no-repeat scroll 0 0 transparent;
+ bottom: 0;
+ z-index:5;
+ height: 210px;
+ position: absolute;
+ right: -2px;
+ width: 241px;
+}
+
+.bgnext a {
+ color: #999999;
+	font-family: 'Conv_SohoGothicPro-Light';
+ display: inline-block;
+ margin: 64px 0 0 91px;
+ width: 50px;
+}
+
+div.chapter {
+height:100%; float: left; min-width: 100%; overflow: hidden;
+}
+
+
+div.chapter-wrap {
+ overflow:hidden;
+ float:left;
+ height:100%;
+ width:100%;
+}
+
+div.chapter-wrap > div {
+ position:relative;
+ float:left;
+ width:100%;
+ height:100%;
+}
+
+div.home-div {
+ background:url(../img/background/bg-down.jpg) no-repeat scroll right bottom #5169dd;	
+}
+
+div.work-div:before { 
+ dcontent: "";
+ dbackground:url(../img/background/work-before.gif) no-repeat scroll left 0;	
+}
+
+div.work-div {
+ background:#485dc6;
+}
+
+div.diagonal {
+ background:#222222;
+ position:absolute;
+ width:100%;
+ height:100%;
+ z-index:0;
+  transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-webkit-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-moz-transform: rotate(0deg) scale(1) skew(-33deg) translate(0px);-o-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-ms-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);
+}
+
+div.work-div:after { 
+ xbackground:red;
+}
+
+
+div.work-div p {
+ color:#fff;
+}
+
+div.work {
+ top:18%;
+ left:7.4%;
+ clear:both;
+ position:absolute;
+ width:1095px; 
+}
+
+
+div.work-div div.lines {
+ background:url("../img/background/bg-up2.png") no-repeat scroll 0 0;
+ width:454px;
+ left:460px;
+ top:0;
+ height:201px;
+ position:absolute;
+ z-index:10;
+}
+
+div.about-div {
+ width:100%; 
+ float:left;
+ background:#5169dd;
+ height:100%;
+
+}
+
+div.about-div div.lines {
+ display:none;
+}
+
+h2 {
+ font-family: 'Conv_SohoGothicPro-Medium';
+ font-size:45px;
+ color:#fff;
+ line-height:55px;
+ font-weight:normal;
+}
+
+div.about-div h2 {
+ width:950px;
+ padding-bottom:10px;
+ display:block;
+}
+
+div.work-info {
+ float:left;
+ width:1040px;
+ height:233px;
+ background:url("../img/background/work-bg.png") no-repeat scroll 0 0;
+}
+
+div.block {
+ float:left;
+ width:208px;
+ padding: 32px 40px 0 17px;
+}
+
+div.block p {
+ color:#727272;
+ font-size:16px;
+ line-height:18px;
+}
+
+a.active {
+ color:#a1a9dd;
+}
+
+.work-info div.block:last-child {
+ padding-right:0;
+}
+
+h3 {
+ font-size:22px;
+ font-weight:normal;
+ color:#485dc5;
+ font-family: 'Conv_SohoGothicPro-Light';
+}
+
+div.home-div h1{
+ width:670px;
+}
+
+
+div.about-div .diagonal {
+background:#485dc6;
+
+}
+
+
+div.inside-div h2,
+div.contact-div h2,
+div.work-div h2 {
+  font-size: 75px;
+}
+
+div.workslide {
+ float:left;
+ padding: 5% 0 0 0;
+ width:1038px;
+ overflow:hidden;
+ height:300px;
+}
+
+div.workslide  ul {
+ float:left;
+ position:relative;
+ width:100%;
+}
+
+div.workslide  ul li {
+ float:left;
+ width:346px;
+ height:300px;
+ list-style:none;
+ position:relative;
+}
+
+div.workslide  ul li div.heading {
+ position:absolute;
+ z-index:10;
+ background:url("../img/background/plus.gif") no-repeat scroll 90% center #000;
+ width:310px;
+ padding: 15px 18px;
+ bottom:0;
+ display:none;
+}
+
+div.workslide  ul li img {
+ position:absolute;
+}
+
+div.workslide  ul li div.heading h3 {
+ font-size:17px;
+ padding:0;
+ margin:0;
+ width:80%;
+ display:inline-block;
+ color:#fff;
+}
+
+div.workslide  ul li div.heading p {
+ margin:0;
+ padding:0;
+ clear:both;
+ font-family:arial;
+ font-size:12px;
+ color:#666666;
+}
+
+div.handler  span {
+ color:#fff;
+ float:left;
+ width:38px;
+ position:relative;
+ height:38px;
+ cursor:pointer;
+}
+
+div.handler  span.next {
+ background:url("../img/background/next.png") no-repeat scroll 0 0;
+ text-indent:9999em;
+ left: 26%;
+ 
+}
+
+div.handler  span.prev {
+ background:url("../img/background/prev.png") no-repeat scroll 0 0;
+ text-indent:9999em;
+ left:26%;
+}
+
+
+div.handler  span.next-a {
+ background:url("../img/background/next.png") no-repeat scroll 0 0;
+ text-indent:9999em;
+ left: 26%;
+ 
+}
+
+div.handler  span.prev-a {
+ background:url("../img/background/prev.png") no-repeat scroll 0 0;
+ text-indent:9999em;
+ left:26%;
+}
+
+div.handler {
+ float:left;
+ width:100%;
+ position:relative;
+ z-index:110;
+ clear:both;
+ background:url("../img/background/handlerbg.png") no-repeat scroll 0 50%;
+ margin:20px 0 10px 20%;
+}
+
+div.details {
+ display:none;
+}
+
+div.ovrlay {
+    background: none repeat scroll 0 0 #222222;
+    height: 90%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+div.ovrlay-content div.img {
+ left: 18%;
+ position: absolute;
+ top: 0;
+ z-index: 101;
+}
+
+div.ovrlay-content div.img {
+ opacity:0;
+}
+
+div.ovrlay-content div.current{
+opacity:1;
+}
+
+div.ovrlay-content {
+ float:left;
+ width : 1240px;
+ position: relative;
+ top: 25px;
+}
+
+div.ovrlay-content .infoUp {
+ display:none;	
+}
+
+div.ovrlay-wrap {
+ width: 910px;
+ float:left;
+ left:50%;
+ margin-left: -455px;
+}
+
+div.ovrlay-wrap div.img {
+ position:absolute;
+ height: 504px;
+ position: absolute;
+ width: 909px;
+}
+
+div.work-div div.infoovr {
+    background: url("../img/background/info.png") no-repeat scroll 0 0 transparent;
+    height: 49px;
+    left: 67%;
+    position: absolute;
+	cursor:pointer;
+    top: 24px;
+	width: 49px;
+    z-index: 110;
+}
+div.work-div  .desc {
+    background: none repeat scroll 0 0 #111111;
+    color: #7A7A7A;
+    font-size: 12px;
+    left: 63%;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+	margin-top:35px;
+	display:none;
+    width: 175px;
+	font-family:'Conv_SohoGothicPro-Light';
+    z-index: 101;
+}
+
+div.work-div div.close {
+    height: 49px;
+	cursor:pointer;
+    left: 70%;
+    position: absolute;
+    top: 24px;
+    width: 49px;
+    z-index: 101;
+  background: url("../img/background/close.png") no-repeat scroll 0 0 transparent;
+}
+
+div.inside-div {
+ background:#222;
+}
+
+div.inside-div div.diagonal {
+ background:#485dc6;
+}
+
+
+div.inside-div  h2 {
+    margin-left: 40%;
+    margin-top: 16%;
+}
+
+div.contact-div div.diagonal {
+ background:#5165c8;
+}
+
+
+div.coninfo {
+ float:left;
+ padding: 95px 0 0 0;
+ width:357px;
+}
+
+div.coninfo h3 {
+ font-size:30px;
+ font-family: 'Conv_SohoGothicPro-Medium';
+ display:block;
+ padding-bottom:35px;
+ color:#fff;
+}
+
+address {
+ color:#fff;
+ font-family: 'Conv_SohoGothicPro-Light';
+ font-size:17px;
+ font-style:normal;
+}
+
+div.visit {
+ padding-right: 60px;
+ width:320px;
+}
+
+div.visit h3 {
+  background: url("../img/background/visit.png") no-repeat scroll 38% 4px transparent;
+}
+
+div.call h3 {
+  background:url("../img/background/phone.png") no-repeat scroll 31% 6px transparent;
+}
+
+div.mailus h3 {
+  background:url("../img/background/email.png") no-repeat scroll 35% 6px transparent;
+}
+
+div.visit address {
+ display:block;
+ margin-bottom: 40px;
+}
+
+div.coninfo p {
+ margin:0;
+ font-size:17px;
+ display:block;
+ margin-bottom: 60px;
+ padding:0;
+}
+
+div.mailus p {
+ color:#000000;
+ margin-bottom: 35px;
+ 
+}
+
+div.mailus p a {
+ display:block;
+ color:#fff;
+}
+
+
+
+div.contact-div .work {
+left:9.5%;
+}
+
+a {
+ outline:none !important;
+}
+
+div.contact-div {
+ background:#485DC6;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
