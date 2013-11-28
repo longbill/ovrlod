@@ -10,18 +10,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Ovrlod</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=1200px">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/skrollr.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
-    <div class="Main clearfix">
-      <header>
-        <div class="header-wrap">
+    <header>
+      <div class="wrapper">
+        <div class="inner-left">
           <nav>
             <ul>
               <li>
@@ -42,58 +43,105 @@
             <a class="fb" href="#"></a>
             <a class="twitter" href="#"></a>
           </div>
-          <a class="logo" href="#home"><img src="img/content/logo.png" alt="Logo" /></a>
         </div>
-      </header>
-      <div class="chapter-wrap">
+        <a class="logo" href="#home"><img src="img/content/logo.png" alt="Logo" /></a>
+      </div>
+    </header>
+    
+    <div class="Main clearfix" id="skrollr-body">
+      <div class="chapter-wrap" 
+            data-_screen1="left:0%;" 
+            data-_screen1stop="left:-130%;" 
+            data-_screen2="left:-130%;" 
+            data-_screen2stop="left:-280%;"
+            data-_screen3="left:-280%;" 
+            data-_screen3stop="left:-430%;"
+            data-_screen4="left:-430%;" 
+            data-_screen4stop="left:-580%;"
+      >
+
+
+
         <div id="home" class="home-div" data-pagetitle="Ovrlod - Home">
-          <div class="lines"></div>
+          <div class="lines line1" data-0="top:0px;margin-left:0px;" data-_screen2="top:-300px;margin-left:300px;"></div>
           <div class="home">
-            <div class="project">
-              <h1>behind the screens.</h1>
+            <h1 data-0="margin-left:0px;" data-1000="margin-left:100px;">behind<br>the screens.</h1>
+            <div class="project" data-_screen2="opacity:0.5;margin-left:-50px;" data-0="margin-left:0px;opacity:1;">
               <p>
                 Our goal is to provide reliable, high quality and cost effective services for digital production.
               </p>
               <p>
                 We partner with agencies to deliver banners and website development  through to complex and business critical web application solutions .
               </p>
-              <a href="#aboutus">Know More</a>
+            </div>
+            <div class="home-bottom-area">
+              <div class="lines line2" data-0="top:0px;margin-left:0px;" data-_screen2="top:300px;margin-left:-300px;"></div>
+              <a href="#aboutus" data-0="opacity:1;" data-_screen2="opacity:0;">Know More</a>
             </div>
           </div>
-          <div class="bgnext">
+          <div class="bgnext" data-_screen1="bottom:0px;right:0px;" data-_screen2="bottom:-300px; right:-300px;">
             <a href="#work">our work</a>
           </div>
         </div>
+
+
+
+
         <div id="aboutus" class="about-div" data-pagetitle="Ovrlod - About Us">
           <div class="diagonal"></div>
           <div class="lines"></div>
-          <div class="work">
-            <h2>we are a digital production house providing front end and technical services.</h2>
+          <div class="work" data-_screen1="left:130%;" data-_screen1stop="left:5%;">
+            <h2 
+                  data-_screen1="margin-left:-100px;" 
+                  data-_screen1stop="margin-left:0px;" 
+                  data-_screen2="margin-left:0px;"
+                  data-_screen2stop="margin-left:100px;"
+            >we are a digital production house providing front end and technical services.</h2>
             <p>
               We are a seamless extension of your team and with a wide spectrum of skills and experience
               <Br />
               we can help at every stage of the production process.
             </p>
             <div class="work-info">
-              <div class="block">
+              <div class="block" 
+                data-_screen1="left:100px;" 
+                data-_screen1stop="left:0px;"
+                data-_screen2="left:0px;"
+                data-_screen2stop="left:-100px;"
+                >
                 <h3>ux & design</h3>
                 <p>
                   Short on design skills or just looking for a cost effective solution, we can help with wireframes & design templates.
                 </p>
               </div>
-              <div class="block">
+              <div class="block" 
+                data-_screen1="left:120px;" 
+                data-_screen1stop="left:0px;"
+                data-_screen2="left:0px;"
+                data-_screen2stop="left:-100px;"
+                >
                 <h3>front-end</h3>
                 <p>
                   We have the designers and coders to make things look just the way they should.
                 </p>
               </div>
-              <div class="block">
+              <div class="block" 
+                data-_screen1="left:140px;" 
+                data-_screen1stop="left:0px;"
+                data-_screen2="left:0px;"
+                data-_screen2stop="left:-100px;"
+                >
                 <h3>project management</h3>
                 <p>
                   We’ll take the brief, understand what’s required  and possible, assign resources and manage the deadlines and guarantee the quality.
                 </p>
               </div>
-              <div class="block last">
+              <div class="block last" 
+                data-_screen1="left:160px;" 
+                data-_screen1stop="left:0px;"
+                data-_screen2="left:0px;"
+                data-_screen2stop="left:-100px;"
+                >
                 <h3>back-end</h3>
                 <p>
                   Whether you are looking for .net, php or mobile app solutions, we can help.
@@ -102,9 +150,13 @@
             </div>
           </div>
         </div>
+
+
+
+
+
         <div id="work" class="work-div" data-pagetitle="Ovrlod - Work">
           <div class="diagonal"></div>
-          <div class="lines"></div>
           <div class="work">
             <h2>proud to present.</h2>
             <div class="workslide">
@@ -217,8 +269,7 @@
         </div>
       </div>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/drag.js"></script>
-    <script src="js/main.js"></script>
   </body>
+  <script src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/index.js"></script>
 </html>

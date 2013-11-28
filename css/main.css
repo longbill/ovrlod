@@ -124,33 +124,43 @@ scrollbar-arrow-color: #222;
 
 
 div.Main {
- float:left;
- width:100%;	
- position:relative;
- height:100%;
- 
+	height:5000px;
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
 }
 
 div.lines {
- background:url("../img/background/bg-up.png") no-repeat scroll 0 0;
-	width:260px;
-	left:600px;
-	top:0;
-	height:194px;
-	position:absolute;
-	z-index:10;
+ position:absolute;
+ font-size:0;
+ line-height:0;
+ width:1px;
+ left:0%;
+ top:0;
+ height:200px;
+ background-color:rgba(255,255,255,0.4);
+  transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -webkit-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -moz-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -o-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -ms-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+
+ 
 }
+div.lines.line1 { left: 580px; position: fixed; height:210px;}
 
 header {
- position:fixed;
+ 	position: fixed;
 	z-index:10;
 	width:100%;
+	
+	height:100px;
+ 	min-width: 720px;
 }
 
-div.header-wrap {
- margin:23px auto 0 auto;
-	width:1095px;
-}
+header .wrapper { position:relative; width:100%; display: block; height: 100%;}
+header .inner-left { position:absolute;  left:5%; width: 480px; top: 20px;}
 
 nav ul {
  width:375px;
@@ -171,7 +181,7 @@ nav ul li a {
 
 div.social {
  float:left;
- margin: 22px 0 0 50px;
+ margin: 24px 0 0 50px;
  width:55px;
 }
 
@@ -191,8 +201,9 @@ div.social a.twitter {
 }
 
 a.logo {
- float:right;
- margin: 0 35px 0 0;
+ float: right;
+ margin-right: 5%;
+ margin-top: 20px;
 }
 
 div.content {
@@ -209,16 +220,17 @@ div.home {
 
 h1 {
  font-family: 'Conv_SohoGothicPro-Medium';
- font-size:75px;
+ font-size: 110px;
  color:#fff;
- line-height:78px;
+ line-height: 100px;
  font-weight:normal;
 }
 
 div.project {
- float:left;
- width:650px;
- padding:110px 0 0 0;
+	position:fixed;
+	left: 6%;
+	top: 320px;
+	width:666px;
 }
 
 p {
@@ -252,8 +264,8 @@ div.bgnext {
  bottom: 0;
  z-index:5;
  height: 210px;
- position: absolute;
- right: -2px;
+ position: fixed;
+ right: 0;
  width: 241px;
 }
 
@@ -272,9 +284,11 @@ height:100%; float: left; min-width: 100%; overflow: hidden;
 
 div.chapter-wrap {
  overflow:hidden;
- float:left;
- height:100%;
- width:100%;
+ position:fixed;
+ left:0px;
+ width: 50000px;
+ height: 500px;
+ background-color: #4458BB;
 }
 
 div.chapter-wrap > div {
@@ -285,7 +299,7 @@ div.chapter-wrap > div {
 }
 
 div.home-div {
- background:url(../img/background/bg-down.jpg) no-repeat scroll right bottom #5169dd;	
+ background-color: #4458BB;	
 }
 
 div.work-div:before { 
@@ -294,7 +308,6 @@ div.work-div:before {
 }
 
 div.work-div {
- background:#485dc6;
 }
 
 div.diagonal {
@@ -302,8 +315,9 @@ div.diagonal {
  position:absolute;
  width:100%;
  height:100%;
- z-index:0;
-  transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-webkit-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-moz-transform: rotate(0deg) scale(1) skew(-33deg) translate(0px);-o-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);-ms-transform:  rotate(0deg) scale(1) skew(-33deg) translate(0px);
+ z-index: 0;
+ transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -webkit-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);-moz-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);-o-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);-ms-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
 }
 
 div.work-div:after { 
@@ -317,29 +331,23 @@ div.work-div p {
 
 div.work {
  top:18%;
- left:7.4%;
+ left: 23%;
  clear:both;
- position:absolute;
- width:1095px; 
+ position: absolute;
+ width: 915px; 
 }
 
+.about-div .work { position:fixed; left:100%; top: 18%;}
 
-div.work-div div.lines {
- background:url("../img/background/bg-up2.png") no-repeat scroll 0 0;
- width:454px;
- left:460px;
- top:0;
- height:201px;
- position:absolute;
- z-index:10;
-}
+
+
 
 div.about-div {
  width:100%; 
  float:left;
- background:#5169dd;
  height:100%;
 
+ padding: 0 0px;
 }
 
 div.about-div div.lines {
@@ -364,13 +372,15 @@ div.work-info {
  float:left;
  width:1040px;
  height:233px;
- background:url("../img/background/work-bg.png") no-repeat scroll 0 0;
 }
 
 div.block {
  float:left;
- width:208px;
- padding: 32px 40px 0 17px;
+ width:220px;
+ padding: 30px 20px 20px 20px;
+ background:url("../img/background/work-bg.png") no-repeat scroll 0 0;
+ height:180px;
+ position:relative;
 }
 
 div.block p {
@@ -396,6 +406,9 @@ h3 {
 
 div.home-div h1{
  width:670px;
+ position: fixed;
+ top: 110px;
+ left: 5%;
 }
 
 
@@ -610,8 +623,8 @@ div.inside-div div.diagonal {
 
 
 div.inside-div  h2 {
-    margin-left: 40%;
-    margin-top: 16%;
+    margin-left: 30%;
+    margin-top: 18%;
 }
 
 div.contact-div div.diagonal {
@@ -622,7 +635,8 @@ div.contact-div div.diagonal {
 div.coninfo {
  float:left;
  padding: 95px 0 0 0;
- width:357px;
+ width: 30%;
+ margin-right: 3%;
 }
 
 div.coninfo h3 {
@@ -641,20 +655,18 @@ address {
 }
 
 div.visit {
- padding-right: 60px;
- width:320px;
 }
 
 div.visit h3 {
-  background: url("../img/background/visit.png") no-repeat scroll 38% 4px transparent;
+  background: url("../img/background/visit.png") no-repeat scroll 46% 4px transparent;
 }
 
 div.call h3 {
-  background:url("../img/background/phone.png") no-repeat scroll 31% 6px transparent;
+  background: url("../img/background/phone.png") no-repeat scroll 46% 6px transparent;
 }
 
 div.mailus h3 {
-  background:url("../img/background/email.png") no-repeat scroll 35% 6px transparent;
+  background: url("../img/background/email.png") no-repeat scroll 47% 6px transparent;
 }
 
 div.visit address {
@@ -684,7 +696,7 @@ div.mailus p a {
 
 
 div.contact-div .work {
-left:9.5%;
+    width: 1000px;
 }
 
 a {
@@ -694,6 +706,35 @@ a {
 div.contact-div {
  background:#485DC6;
 }
+
+
+
+.home .home-bottom-area { position:fixed;left:40%; bottom:0px; height:200px; width:200px; z-index: 0;}
+.home .home-bottom-area .lines { left:100px; }
+.home .home-bottom-area a 
+{ 
+ background:#fff;
+ padding:25px;
+ font-family: 'Conv_SohoGothicPro-Light';
+ color:#485dc5;
+ width:44px;
+ height:44px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border-radius: 100px;
+ float:right;
+ text-align:center;
+ right:20px;
+ top:20px;
+ position:relative;
+ z-index:1;
+}
+
+
+
+
+
+
 
 /* ==========================================================================
    Media Queries
