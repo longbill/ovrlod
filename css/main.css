@@ -444,6 +444,7 @@ div.workslide  ul li {
  height:300px;
  list-style:none;
  position:relative;
+ cursor:pointer;
 }
 
 div.workslide  ul li div.heading {
@@ -452,9 +453,11 @@ div.workslide  ul li div.heading {
  background:url("../img/background/plus.gif") no-repeat scroll 90% center #000;
  width:310px;
  padding: 15px 18px;
- bottom:0;
- display:none;
+ bottom: -200px;
+ transition:all ease 0.3s;
 }
+
+div.workslide  ul li:hover div.heading { bottom:0px; }
 
 div.workslide  ul li img {
  position:absolute;
