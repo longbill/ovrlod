@@ -28,6 +28,8 @@ $(function()
 
 
 
+
+	//work page slide left/right
 	(function()
 	{
 		var $wrapper = $('#work .workslide');
@@ -102,8 +104,28 @@ $(function()
 	
 
 
+	//click on work item
+
+	$('.workslide > ul > li').click(function()
+	{
+		$('#work-info').show();
+	});
 
 
+	$('#work-info .button.back').click(function()
+	{
+		$('#work-info').hide();
+	});
+
+	$('#work-info .button.info').click(function()
+	{
+		$('#work-info-info').show();
+	});
+
+	$('#work-info-info .button.back').click(function()
+	{
+		$('#work-info-info').hide();
+	});
 
 
 });
