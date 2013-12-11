@@ -108,23 +108,23 @@ $(function()
 
 	$('.workslide > ul > li').click(function()
 	{
-		$('#work-info').show();
+		$('#work-info').fadeIn();
 	});
 
 
 	$('#work-info .button.back').click(function()
 	{
-		$('#work-info').hide();
+		$('#work-info').fadeOut();
 	});
 
 	$('#work-info .button.info').click(function()
 	{
-		$('#work-info-info').show();
+		$('#work-info-info').fadeIn();
 	});
 
 	$('#work-info-info .button.back').click(function()
 	{
-		$('#work-info-info').hide();
+		$('#work-info-info').fadeOut();
 	});
 
 

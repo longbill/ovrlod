@@ -125,7 +125,7 @@ scrollbar-arrow-color: #222;
 
 div.Main {
 	height:5000px;
-	position:absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	width: 100%;
@@ -148,7 +148,7 @@ div.lines {
 
  
 }
-div.lines.line1 { left: 580px; position: fixed; height:210px;}
+div.lines.line1 { left: 580px; position: absolute; height:210px;}
 
 header {
  	position: fixed;
@@ -160,7 +160,7 @@ header {
 }
 
 header .wrapper { position:relative; width:100%; display: block; height: 100%;}
-header .inner-left { position:absolute;  left:5%; width: 480px; top: 20px;}
+header .inner-left { position:absolute;  left: 4.5%; width: 480px; top: 20px;}
 
 nav ul {
  width:375px;
@@ -227,7 +227,7 @@ h1 {
 }
 
 div.project {
-	position:fixed;
+	position: absolute;
 	left: 6%;
 	top: 320px;
 	width:666px;
@@ -283,23 +283,24 @@ height:100%; float: left; min-width: 100%; overflow: hidden;
 
 
 div.chapter-wrap {
- overflow:hidden;
- position:fixed;
+ position: absolute;
  left:0px;
- width: 50000px;
- height: 500px;
+ width: 100%;
+ height: 100%;
  background-color: #4458BB;
 }
 
 div.chapter-wrap > div {
- position:relative;
- float:left;
+ position: absolute;
  width:100%;
  height:100%;
+ z-index: 0;
+ left: 100%;
 }
 
-div.home-div {
+div.home-div#home {
  background-color: #4458BB;	
+ left: 0%;
 }
 
 div.work-div:before { 
@@ -336,17 +337,15 @@ div.work {
  position: absolute; 
 }
 
-.about-div .work { position:fixed; left:100%; top: 18%;}
+.about-div .work { position: absolute; top: 18%;}
 
 
 
 
 div.about-div {
  width:100%; 
- float:left;
  height:100%;
 
- padding: 0 0px;
 }
 
 div.about-div div.lines {
@@ -405,7 +404,7 @@ h3 {
 
 div.home-div h1{
  width:670px;
- position: fixed;
+ position: absolute;
  top: 110px;
  left: 5%;
 }
@@ -614,7 +613,6 @@ div.work-div div.close {
 }
 
 div.inside-div {
- background:#222;
 }
 
 div.inside-div div.diagonal {
@@ -704,12 +702,11 @@ a {
 }
 
 div.contact-div {
- background:#485DC6;
 }
 
 
 
-.home .home-bottom-area { position:fixed;left:40%; bottom:0px; height:200px; width:200px; z-index: 0;}
+.home .home-bottom-area { position: absolute;left:40%; bottom:0px; height:200px; width:200px; z-index: 0;}
 .home .home-bottom-area .lines { left:100px; }
 .home .home-bottom-area a 
 { 
