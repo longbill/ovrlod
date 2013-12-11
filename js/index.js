@@ -175,6 +175,7 @@ $(function()
 		});
 		if (items.length == 0) return;
 		$('#work-info').data('items',items).data('current',0).animate({'top':0},300);
+		$('#work-info img').removeAttr('src');
 		showWorkInfo();
 	});
 
