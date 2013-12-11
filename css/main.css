@@ -150,6 +150,9 @@ div.lines {
 }
 div.lines.line1 { left: 580px; position: absolute; height:210px;}
 
+#aboutus .lines.line1 { left: 1500px; position: absolute; height: 290px; z-index: 100; top: 0;}
+#aboutus .lines.line2 { right: 980px; position: absolute; z-index: 100; top: 600px; height: 240px; left: auto;}
+
 header {
  	position: fixed;
 	z-index:10;
@@ -349,7 +352,6 @@ div.about-div {
 }
 
 div.about-div div.lines {
- display:none;
 }
 
 h2 {
@@ -963,5 +965,10 @@ transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
 #work-info-info .lines.line21 { background-color: #333; left:auto; top: 0; height: 500px;  right: 250px;}
 #work-info-info .button { font-family:Arial; z-index:3; cursor:pointer; background-color:#000; color:#888; font-size:12px; position:absolute; border-radius:100px; width:60px; height:60px; line-height:60px; text-align:center; right:480px; top:480px;}
 #work-info-info .button:hover { color:#fff; }
+
+
+header .lines.headline { height: 63px; left: 469px; opacity: 0.3;}
+#work .lines.line1 { left: 1250px; height:180px; }
+
 
 

@@ -50,8 +50,11 @@ $(function()
 		}
 	});
 
+
+	var changeHashTimer;
 	$(window).bind('scroll',function()
 	{
+		try{ clearTimeout(changeHashTimer); }catch(e){ }
 		var _top = $(window).scrollTop();
 		if (_top < 0) _top = 0;
 		var hash = '';
@@ -64,7 +67,10 @@ $(function()
 		}
 		if (hash)
 		{
-			window.location.hash = '#'+hash;
+			changeHashTimer = setTimeout(function()
+			{
+				window.location.hash = '#'+hash;
+			},1000);
 		}
 	});
 
@@ -226,7 +232,6 @@ function showWorkInfo()
 
 	if (!current || current <= 0) current = 0;
 	if (current >= items.length) current = items.length - 1;
-	console.log(current);
 	$('#work-info').find('img').attr('src', items[current].img);
 	$('#work-info').data('current',current);
 }
