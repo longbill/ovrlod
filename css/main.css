@@ -420,6 +420,7 @@ div.inside-div h2,
 div.contact-div h2,
 div.work-div h2 {
   font-size: 75px;
+  width: 100%
 }
 
 div.workslide {
@@ -892,11 +893,10 @@ div.contact-div {
 	position:fixed;
 	left:0;
 	right:0;
-	top:0;
-	bottom:0;
+	top: -100%;
+	height: 100%;
 	background-color:#222;
 	z-index:20;
-	display:none;
 }
 
 #work-info .img b { display:table-cell; vertical-align:middle; }
@@ -916,7 +916,7 @@ div.contact-div {
 #work-info .button.info {  left:50px; top:180px; }
 #work-info .button.next { width:38px; height:38px; background-image:url(../img/background/next.png); right:80px; left:auto;bottom:145px;top:auto; background-color:transparent;}
 #work-info .button.prev { width:38px; height:38px; background-image:url(../img/background/prev.png); right:80px; left:auto;bottom:183px;top:auto; background-color:transparent;}
-
+#work-info .button.disabled { opacity:0.5; cursor:default;}
 
 #work-info-info
 {
