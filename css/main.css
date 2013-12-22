@@ -93,7 +93,6 @@ a {
 
 html,body{
  width:100%;
- doverflow:hidden;
  height:100%;
  
  scrollbar-face-color: #222;
@@ -307,8 +306,8 @@ div.home-div#home {
 }
 
 div.work-div:before { 
- dcontent: "";
- dbackground:url(../img/background/work-before.gif) no-repeat scroll left 0;	
+/*  content: "";
+ background:url(../img/background/work-before.gif) no-repeat scroll left 0;	 */
 }
 
 div.work-div {
@@ -325,7 +324,7 @@ div.diagonal {
 }
 
 div.work-div:after { 
- xbackground:red;
+/*  xbackground:red; */
 }
 
 
@@ -714,25 +713,31 @@ div.contact-div {
 .home .home-bottom-area a 
 { 
  background:#fff;
- padding:25px;
+ padding: 25px 10px;
  font-family: 'Conv_SohoGothicPro-Light';
  color:#485dc5;
- width:44px;
- height:44px;
+ width: 70px;
+ height: 40px;
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
  border-radius: 100px;
  float:right;
  text-align:center;
- right:20px;
- top:20px;
+ right: 0;
+ top: 0;
  position:relative;
  z-index:1;
+ line-height: 18px;
 }
 
 
 
-
+#home .tab2 .home-bottom-area  { left: 14%; height: 300px; width: 300px;}
+#home .tab2 .home-bottom-area .lines { height:300px; left: 150px;}
+#home .tab2 .home-bottom-area a {
+    top: 0;
+    right: 0;
+}
 
 
 
@@ -744,12 +749,12 @@ div.contact-div {
 
 }
 
-@media print,
+/* @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
 
-}
+} */
 
 /* ==========================================================================
    Helper classes
@@ -970,5 +975,15 @@ transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
 header .lines.headline { height: 63px; left: 469px; opacity: 0.3;}
 #work .lines.line1 { left: 1250px; height:180px; }
 
+#home .home-tabs { position:absolute; left:0; top:0; width:100%; height:100%;}
+#home .home-tabs .tab { position:absolute; left:0; top:0; width:100%; height:100%; display:none;}
+#home .home-tabs .tab.active {  display:block; }
+#home .home-tabs .tab2 h1 { font-size:80px; top: 24%; line-height: 80px;}
+#home .home-tabs .tab2 div.project { top: 48%;}
+
+#home .imac { width:432px; height:359px; background-image:url(../img/background/imac.png); position:absolute; left: 45%; top: 27%;}
+#home .imac .screen { width:397px; height:224px; position:absolute; left: 17px; top: 18px; }
+#home .imac .screen img { display:none; }
+#home .imac .screen img.active { display:block; }
 
 

@@ -292,7 +292,7 @@ dl,
 menu,
 ol,
 ul {
-    dmargin: 1em 0;
+/*     dmargin: 1em 0; */
 }
 
 dd {
@@ -306,7 +306,7 @@ dd {
 menu,
 ol,
 ul {
-    dpadding: 0 0 0 40px;
+/*     dpadding: 0 0 0 40px; */
 }
 
 /**

@@ -40,15 +40,102 @@ $(function()
     });
 
 
-	$('a[href^=#]').click(function()
+// 	$('a[href^=#]').click(function()
+// 	{
+// 		if (!this.href) return;
+// 		var hash = this.href.split('#').pop();
+// 		if (ANCHORS[hash] !== undefined)
+// 		{
+// 			$('body').animate({scrollTop: ANCHORS[hash]},300);
+// 		}
+// 	});
+	
+	
+	(function()
 	{
-		if (!this.href) return;
-		var hash = this.href.split('#').pop();
+		var lastHash = location.hash;
+		setInterval(function()
+		{
+			var currentHash = location.hash;
+			if (currentHash != '' && currentHash != lastHash)
+			{
+				lastHash = currentHash;
+				var hash = currentHash.replace('#','');
+				gotoScreen(hash);
+			}
+		},100);
+	})();
+	
+	function gotoScreen(hash)
+	{
 		if (ANCHORS[hash] !== undefined)
 		{
 			$('body').animate({scrollTop: ANCHORS[hash]},300);
+			document.title = $('#'+hash).attr('data-pagetitle');
+			$('header a.active').removeClass('active');
+			$('header a[href$='+hash+']').addClass('active');
 		}
+	}
+	
+	$('#home .home-tabs').each(function()
+	{
+		setInterval(slideNext,10000);
+		var $container = $(this);
+		function slideNext()
+		{
+			if ($(window).scrollTop() >= 1300) return;
+			var $current = $container.find('.tab.active');
+			var $next = $current.next('.tab');
+			if ($next.length == 0) $next = $container.find('.tab').eq(0);
+			$current.fadeOut(
+			{
+				duration: 500,
+				easing: 'linear',
+				complete: function()
+				{
+					setTimeout(function()
+					{
+						$next.fadeIn(
+						{
+							duration:500,
+							easing:'linear',
+							complete:function()
+							{
+								$current.removeClass('active');
+								$next.addClass('active');
+							}
+						});
+					},200);
+				}
+			});
+		}
+		
+		$(this).find('.screen').each(function()
+		{
+			var $container = $(this);
+			setInterval(next,3000);
+			function next()
+			{
+				if ($(window).scrollTop() >= 1300) return;
+				var $current = $container.find('img.active');
+				var $next = $current.next('img');
+				if ($next.length == 0) $next = $container.find('img').eq(0);
+				$current.fadeOut(300,function()
+				{
+					setTimeout(function()
+					{
+						$next.fadeIn(300,function()
+						{
+							$current.removeClass('active');
+							$next.addClass('active');
+						});
+					},100);
+				});
+			}
+		});
 	});
+	
+	
 
 
 	var changeHashTimer;
@@ -70,7 +157,7 @@ $(function()
 			changeHashTimer = setTimeout(function()
 			{
 				window.location.hash = '#'+hash;
-			},1000);
+			},500);
 		}
 	});
 
@@ -78,10 +165,7 @@ $(function()
 	if (window.location.hash)
 	{
 		var hash = location.hash.replace('#','');
-		if (ANCHORS[hash] !== undefined)
-		{
-			$('body').animate({scrollTop: ANCHORS[hash]},300);
-		}
+		gotoScreen(hash);
 	}
 
 
