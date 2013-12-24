@@ -1,5 +1,13 @@
 $(function()
 {
+
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+	    animation: "slide"
+	  });
+	});
+
+	
 	$(window).bind('resize',resetPageSize);
 	resetPageSize();
 

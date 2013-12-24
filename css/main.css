@@ -942,7 +942,7 @@ transform-origin:100% 0%;
 
 -ms-transform-origin:100% 0%; 		/* IE 9 */
 
--webkit-transform-origin:100% 0%;	/* Safari 和 Chrome */
+-webkit-transform-origin:100% 0%;	/* Safari 鍜� Chrome */
 
 -moz-transform-origin:100% 0%;		/* Firefox */
 
@@ -987,5 +987,4 @@ header .lines.headline { height: 63px; left: 469px; opacity: 0.3;}
 #home .imac .screen img.active { display:block; }
 
 
-#inside .inside-content { position:absolute; left:23%; width:50%; top:0; bottom:0; overflow:auto; padding-top:100px; }
-#inside .inside-content img { max-width:100%; height:auto; display:block; margin-top:30px; }
+#inside .inside-content { position:absolute; left: 33%; width: 40%; top: 100px; bottom:0; }
