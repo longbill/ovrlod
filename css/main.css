@@ -696,7 +696,7 @@ div.mailus p a {
 
 
 div.contact-div .work {
-    width: 1000px;
+    width: 75%;
 }
 
 a {
@@ -988,3 +988,26 @@ header .lines.headline { height: 63px; left: 469px; opacity: 0.3;}
 
 
 #inside .inside-content { position:absolute; left: 33%; width: 40%; top: 100px; bottom:0; }
+
+#contact .right-bg { background-color:#485dc5; position:absolute; left:86.6%; top:0; height:100%; width:86.6%; 
+
+transform-origin:100% 0%;
+
+-ms-transform-origin:100% 0%; 		/* IE 9 */
+
+-webkit-transform-origin:100% 0%;	/* Safari 鍜� Chrome */
+
+-moz-transform-origin:100% 0%;		/* Firefox */
+
+-o-transform-origin:100% 0%;		/* Opera */
+
+transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -webkit-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -moz-transform: rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -o-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ -ms-transform:  rotate(0deg) scale(1) skew(-45deg) translate(0px);
+ }
+ 
+#contact .right-bg b { height:50%; width:0; display:block; position:absolute; left:-1px; bottom:0; border-left:1px solid #8694d9; }
+#contact .right-bg b.line2 { left:-23%; height:20%; }
+#contact .right-bg b.line3 { left:-23%; height:20%; bottom:auto; top:0; }
