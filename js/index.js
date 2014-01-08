@@ -69,19 +69,21 @@ $(function()
 			{
 				lastHash = currentHash;
 				var hash = currentHash.replace('#','');
-				gotoScreen(hash);
+				arr = hash.split('/');
+				gotoScreen(arr[0],arr[1]);
 			}
 		},100);
 	})();
 	
-	function gotoScreen(hash)
+	function gotoScreen(hash,action)
 	{
 		if (ANCHORS[hash] !== undefined)
 		{
-			$('body').animate({scrollTop: ANCHORS[hash]},300);
+			$('html,body').animate({scrollTop: ANCHORS[hash]},300);
 			document.title = $('#'+hash).attr('data-pagetitle');
 			$('header a.active').removeClass('active');
 			$('header a[href$='+hash+']').addClass('active');
+			if (action) showAction(hash,action);
 		}
 	}
 	
@@ -125,9 +127,9 @@ $(function()
 			function next()
 			{
 				if ($(window).scrollTop() >= 1300) return;
-				var $current = $container.find('img.active');
-				var $next = $current.next('img');
-				if ($next.length == 0) $next = $container.find('img').eq(0);
+				var $current = $container.find('a.active');
+				var $next = $current.next('a');
+				if ($next.length == 0) $next = $container.find('a').eq(0);
 				$current.fadeOut(300,function()
 				{
 					setTimeout(function()
@@ -253,7 +255,7 @@ $(function()
 
 
 	//click on work item
-
+	var shouldAutoShowPorject = true;
 	$('.workslide > ul > li').click(function()
 	{
 		var items = [];
@@ -269,12 +271,31 @@ $(function()
 		$('#work-info').data('items',items).data('current',0).animate({'top':0},300);
 		$('#work-info img').removeAttr('src');
 		showWorkInfo();
+		if ($(this).attr('data-name'))
+		{
+			shouldAutoShowPorject = false;
+			location.hash = '#work/'+$(this).attr('data-name');
+			setTimeout(function()
+			{
+				shouldAutoShowPorject = true;
+			},200);
+		}
 	});
+
+
+	function showAction(_screen,action)
+	{
+		if (_screen == 'work' && shouldAutoShowPorject)
+		{
+			$('.workslide > ul > li[data-name='+action+']').trigger('click');
+		}
+	}
 
 
 	$('#work-info .button.back').click(function()
 	{
 		$('#work-info').animate({'top':'-100%'},300);
+		location.hash = '#work';
 	});
 
 	$('#work-info .button.info').click(function()

@@ -388,8 +388,8 @@ div.block p {
  line-height:18px;
 }
 
-a.active {
- color:#a1a9dd;
+a.active,a:hover {
+ color:#a1a9dd !important;
 }
 
 .work-info div.block:last-child {
@@ -658,15 +658,15 @@ div.visit {
 }
 
 div.visit h3 {
-  background: url("../img/background/visit.png") no-repeat scroll 46% 4px transparent;
+  background: url("../img/background/visit.png") no-repeat scroll 120px 4px transparent;
 }
 
 div.call h3 {
-  background: url("../img/background/phone.png") no-repeat scroll 46% 6px transparent;
+  background: url("../img/background/phone.png") no-repeat scroll 110px 6px transparent;
 }
 
 div.mailus h3 {
-  background: url("../img/background/email.png") no-repeat scroll 47% 6px transparent;
+  background: url("../img/background/email.png") no-repeat scroll 120px 6px transparent;
 }
 
 div.visit address {
@@ -983,11 +983,11 @@ header .lines.headline { height: 63px; left: 469px; opacity: 0.3;}
 
 #home .imac { width:432px; height:359px; background-image:url(../img/background/imac.png); position:absolute; left: 45%; top: 27%;}
 #home .imac .screen { width:397px; height:224px; position:absolute; left: 17px; top: 18px; }
-#home .imac .screen img { display:none; }
-#home .imac .screen img.active { display:block; }
+#home .imac .screen a { display:none; }
+#home .imac .screen a.active { display:block; }
 
 
-#inside .inside-content { position:absolute; left: 33%; width: 40%; top: 100px; bottom:0; }
+#inside .inside-content { position:absolute; left: 34%; width: 38%; top: 16%; bottom:0; }
 
 #contact .right-bg { background-color:#485dc5; position:absolute; left:86.6%; top:0; height:100%; width:86.6%; 
 
